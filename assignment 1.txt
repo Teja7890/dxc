@@ -1,0 +1,30 @@
+ASS1-----------
+create table emp
+( EmployeeID number ,
+EmployeeName varchar2(10),
+EmployeeAddress varchar2(20),
+DOB date ,
+DOJ date,
+Salary number) 
+
+insert into emp ( EmployeeID , EmployeeName , EmployeeAddress , DOB , DOJ , salary ) values (100 ,'teja' ,'rajahmundry','12/16/1998', '12/04/2019',25000)
+
+insert into emp ( EmployeeID , EmployeeName , EmployeeAddress , DOB , DOJ , salary ) values (101 ,'arjun' ,'vizag','12/08/1968', '12/04/2000',29000)
+
+insert into emp ( EmployeeID , EmployeeName , EmployeeAddress , DOB , DOJ , salary ) values (100 ,'krishna' ,'rajahmundry','11/06/1998', '11/01/2019',29000)
+
+insert into emp ( EmployeeID , EmployeeName , EmployeeAddress , DOB , DOJ , salary ) values (100 ,'teja' ,'vellore','12/01/1998', '12/04/2019',26000)
+
+insert into emp ( EmployeeID , EmployeeName , EmployeeAddress , DOB , DOJ , salary ) values (100 ,'teja' ,'chennai','12/16/1998', '12/04/2019',25000)
+
+
+select * from emp;
+
+ASS2-------------------
+create table emp(
+employeeid number CONSTRAINT PKEMPID primary key,
+employeename varchar2(10),
+employeeaddress varchar2(15) CONSTRAINT CHECKEMPADD check (employeeaddress NOT in ('Newyork', 'London' ,'Paris' ) ),
+ salary number CONSTRAINT CHKEMPSAL check ( salary between 20000 and 30000),
+   companyaddress varchar2(20) default 'ASV Suntech Park'
+); 

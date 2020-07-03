@@ -1,0 +1,21 @@
+
+create table emp(
+employeeid number CONSTRAINT PKEMPID primary key,
+employeename varchar2(10),
+employeeaddress varchar2(15) CONSTRAINT CHECKEMPADD check (employeeaddress NOT in ('Newyork', 'London' ,'Paris' ) ),
+ salary number CONSTRAINT CHKEMPSAL check ( salary between 20000 and 30000),
+   companyaddress varchar2(20) default 'ASV Suntech Park'
+)
+insert into emp values(1,'teja','rajahmundry',28000,default)
+select * from emp;
+
+create table salary
+(
+ employeeid number,
+ employee_pf number,
+employee_hra number,
+CONSTRAINT fkid foreign key (employeeid) references emp(employeeid),
+CONSTRAINT empf check(employee_pf > 0),
+CONSTRAINT emhra check(employee_hra >0)
+)
+
