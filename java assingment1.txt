@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Passenger {
+	int pnrnumber;
+	String passengerName;
+	String journeyDate;
+	String source;
+	String destination;
+	public void source1()
+	{
+		System.out.println("train is arraived"+source);
+	}
+	public void des1()
+	{
+		System.out.println("train is reached"+destination);
+	}
+	public void passengerdetails()
+	{
+		System.out.println("enter pnrnumber :" +pnrnumber);
+		System.out.println("enter passenger name :"+passengerName);
+		System.out.println("enter the journeyDate:"+journeyDate);
+		System.out.println("enter source :"+source);
+		System.out.println("enter destination:"+destination);
+	}
+	public void displaypassenger()
+	{
+		Scanner pc = new Scanner(System.in);
+		System.out.println("enter the pnrnumber");
+		pnrnumber = pc.nextInt();
+		System.out.println("enter the passengerName");
+		passengerName = pc.next();
+		System.out.println("enter the journeydate");
+		journeyDate = pc.next();
+		System.out.println("enter source");
+		source = pc.next();
+		System.out.println("enter destination");
+		destination = pc.next();
+		System.out.println();
+		pc.close();		
+	
+	}
+	public static void main(String[] args) {
+	Passenger k = new Passenger();
+	k.source1();
+	k.des1();
+	k.displaypassenger();
+	k.passengerdetails();
+	
+	
+	}
+	

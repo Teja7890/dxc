@@ -1,0 +1,33 @@
+package src;
+import hr.*;
+import finance.*;
+import java.util.Scanner;
+public class Client {
+	public void bill()
+	{
+		System.out.println("pending bills");
+	}
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		Client c = new Client();
+		c.bill();
+		hr.Employee e = new Employee();
+		e.emp();
+		Manager m = new Manager();
+		m.manage();
+		Salary s = new Salary();
+		s.salary1();
+		Pf p = new Pf();
+		p.pff();
+		Hra h = new Hra();
+		h.hra1();
+		Cgst cm = new Cgst();
+		cm.cgst1();
+		Sgst sm = new Sgst();
+		sm.sgst1();
+		
+		
+	}
+
+}
