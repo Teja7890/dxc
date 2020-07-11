@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class SwitchProgram {
+	 int  ProductNo;
+	 double RetailPrice1 = 22.50;
+	 double RetailPrice2=44.50;
+	 double RetailPrice3=9.98;
+	 int quantity;
+	 Scanner sc = new Scanner(System.in);
+	public void displayDetails()
+	{
+				System.out.println("ProductNo");
+		ProductNo=sc.nextInt();
+		System.out.println("quantity");
+		quantity =sc.nextInt();
+		switch(ProductNo) {
+		case 1:
+			System.out.println("total bill is" +( RetailPrice1*quantity ));
+			break;
+		case 2:
+			System.out.println("total bill is" +( RetailPrice2*quantity ));
+			break;
+		case 3:
+			System.out.println("total bill is" +( RetailPrice3*quantity ));
+			
+		}
+		
+	}
+	
+	
+public static void main(String[] args) {
+	SwitchProgram sw = new SwitchProgram();
+	sw.displayDetails();
+	
+}
+
+}
