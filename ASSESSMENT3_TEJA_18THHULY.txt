@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Form</title>
+<script type = "text/javascript">
+function display(){
+    var uname = document.forms[0].elements[0].value
+    var gender = document.forms[0].elements[1].value
+    var comment = document.forms[0].elements[2].value
+    var username = document.getElementById('username')
+    var usergender = document.getElementById('usergender')
+    var usercomment = document.getElementById('usercomment')
+    if(uname.length == 0)
+        {
+            username.innerHTML ="Name Should not be empty"
+        }
+    else if(uname.length != 0)
+        {
+        username.innerHTML ="Name is:" +uname
+        }
+    with (document.forms[0])
+    {
+        if(gender[0].checked||gender[1].checked)
+        {
+            var gen=gender[0].checked?gender[0].value:gender[1].value
+            usergender.innerHTML = "Your Gender is : " + gen
+           
+        }
+        else{
+           
+            usergender.innerHTML = "Please Select The Gender"
+        }
+   
+        if(select[0].checked||select[1].checked)
+        {
+            var com=select[0].checked?select[0].value:select[1].value
+            usercomment.innerHTML = "Your Comment is : " +com
+           
+        }
+        else{
+           
+            usercomment.innerHTML = "Please Select The Comment"
+        }
+       
+ 
+        }
+}
+ 
+</script>
+</head>
+<body>
+<center>
+<font color = "blue">
+<h1>User Form</h1>
+</font>
+</center>
+<form >
+<table border  = "2" cellspacing = "5" cellpadding ="2" padding ="10" align ="center" bgcolor = "lightblue">
+    <tr>
+        <td>User Name:</td>
+        <td><input type = "text" name = "name" id = "name"></td>
+    </tr>
+    <tr>
+        <td>Spouse Name: </td>
+        <td><input type = "text" name = "spousename" id = "spousename"></td>
+    </tr>
+    <tr>
+        <td>Gender: </td>
+        <td>
+        <input type = "radio" name = "gender" id = "male" value = "male">Male <br/>
+        <input type = "radio" name = "gender" id = "female" value = "female">Female
+        </td>
+    </tr>
+    <tr>
+        <td>Comments: </td>
+        <td>
+        <input type = "radio" name = "select" id = "like" value = "like">Like <br/>
+        <input type = "radio" name = "select" id = "dontlike" value = "dontlike">Don't Like </td>
+    </tr>  
+    <center>
+    <tr>
+        <td colspan = "2" align ="center"><input type = "Button" id = "submit"  value = "Submit" onclick = "display()" > </td>
+    </tr>      
+    </center>
+    <tr>   
+    <td colspan = "2" align ="center"> <span id = "username" name = "username" > </span></td>
+    </tr>
+    <tr>   
+    <td colspan = "2" align ="center"> <span id = "usergender" name = "usergender" > </span></td>
+    </tr>
+    <tr>   
+    <td colspan = "2" align ="center"> <span id = "usercomment" name = "usercomment" > </span></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
